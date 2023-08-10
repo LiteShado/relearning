@@ -222,7 +222,7 @@ cc(7);
 cc("K");
 cc("A");
 
-//introduction to objects and properties
+//introduction to objects and properties dot notation and bracket notation
 
 // Setup
 const testObj = {
@@ -234,3 +234,33 @@ const testObj = {
 // Only change code below this line
 const hatValue = testObj.hat; // Change this line
 const shirtValue = testObj.shirt; // Change this line
+
+// Setup
+const testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water",
+};
+
+// Only change code below this line
+const entreeValue = testObj["an entree"]; // Change this line
+const drinkValue = testObj["the drink"]; // Change this line
+console.log(drinkValue);
+
+//accessing object properties as values INSTEAD OF just accessing it's name
+
+// Setup
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas",
+};
+
+// Only change code below this line
+const playerNumber = 16; // Change this line
+
+const player = testObj[playerNumber]; // Change this line
+
+console.log(player);
+
+////////
