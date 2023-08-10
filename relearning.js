@@ -275,3 +275,39 @@ const myDog = {
 };
 
 myDog.bark = "woof";
+
+//deleting a property from an object using bracket notation
+
+const myDog = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+  bark: "woof",
+};
+
+// Only change code below this line
+delete myDog["tails"];
+
+//using objects for lookups
+
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+
+  const lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank",
+  };
+  result = lookup[val];
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
