@@ -9,11 +9,13 @@ function testEqual(val) {
 testEqual(10);
 
 function testGreaterOrEqual(val) {
-  if (val >= 20) {  // Change this line
+  if (val >= 20) {
+    // Change this line
     return "20 or Over";
   }
 
-  if (val >= 10) {  // Change this line
+  if (val >= 10) {
+    // Change this line
     return "10 or Over";
   }
 
@@ -21,15 +23,13 @@ function testGreaterOrEqual(val) {
 }
 
 testGreaterOrEqual(10);
- // logical operators
+// logical operators
 
 function testLogicalAnd(val) {
   // Only change code below this line
 
   if (val <= 50 && val >= 25) {
-
-      return "Yes";
-
+    return "Yes";
   }
 
   // Only change code above this line
