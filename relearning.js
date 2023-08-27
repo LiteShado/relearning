@@ -392,3 +392,18 @@ const myPlants = [
 ];
 
 const secondTree = myPlants[1].list[1];
+
+// While loops
+
+// Setup
+const myArray = [];
+
+// Only change code below this line
+
+let i = 5;
+
+while (i >= 0) {
+  //decreases i from 5 to 0 inclusive, and pushes to an array
+  myArray.push(i);
+  i--;
+}
