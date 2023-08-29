@@ -426,3 +426,10 @@ const myArray = [];
 for (let i = 1; i <= 9; i += 2) {
   myArray.push(i);
 }
+
+//iterate through an array and add to total
+
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
