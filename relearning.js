@@ -433,3 +433,88 @@ let total = 0;
 for (let i = 0; i < myArr.length; i++) {
   total += myArr[i];
 }
+
+function main() {
+//take flight number and its status
+var flightNumber = readLine();
+var flightStatus = readLine();
+var flight1=new Flight(flightNumber, flightStatus);
+//assign a flight object to flight1 variable
+//output
+console.log('The flight ' + flight1.number + ' is ' + flight1.status)
+}
+
+function Flight(flightNumber, flightStatus) {
+//fix the constructor
+
+this.number = flightNumber;
+this.status = flightStatus;
+};
+
+// another exercise
+
+function main() {
+var prodID = readLine();
+var price = parseInt(readLine(),10);
+var discount = parseInt(readLine(),10);
+var prod1= new Product(prodID, price);
+console.log(prod1.prodID + " price: " + prod1.price);
+prod1.changePrice(discount);
+console.log(prod1.prodID + " new price: " + prod1.price);
+
+
+
+}
+
+function Product(prodID, price) {
+this.prodID = prodID;
+this.price = price;
+
+this.changePrice = function(discount) {
+//your code goes here
+
+this.price = price - (price * discount / 100);
+}
+}
+
+// calling a method inside of a function
+
+function contact(name, number) {
+this.name = name;
+this.number = number;
+this.print = print;
+}
+
+function print() {
+console.log(this.name + ": " + this.number);
+
+}
+var a = new contact("David", 12345);
+var b = new contact("Amy", 987654321);
+a.print();
+b.print();
+
+// changing array
+
+function main() {
+var breakfasts = ['Cinnamon Doughnuts', 'Waffles', 'Granola', 'Chorizo Burrito', 'French Toast'];
+var index = parseInt(readLine(), 10)
+//replace the corresponding element by "Fluffy Pancakes"
+
+breakfasts[index] = "Fluffy Pancakes"
+console.log(breakfasts);
+//output the menu to the console
+}
+
+// Math Objects
+
+function main() {
+var year = parseInt(readLine(), 10)
+//the output
+console.log(calcCent(year));
+}
+
+//complete the function
+function calcCent(year){
+return Math.ceil(year / 100);
+}
