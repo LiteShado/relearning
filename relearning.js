@@ -518,3 +518,92 @@ console.log(calcCent(year));
 function calcCent(year){
 return Math.ceil(year / 100);
 }
+
+// Math Objects
+
+function main() {
+   var year = parseInt(readLine(), 10)
+
+   //the output
+   console.log(calcCent(year));
+
+}
+
+//complete the function
+function calcCent(year){
+   return Math.ceil(year / 100);
+}
+
+// get and print time function
+
+function printTime() {
+	var d = new Date();
+	var hours = d.getHours();
+	var mins = d.getMinutes();
+	var secs = d.getSeconds();
+	document.body.innerHTML = hours+":"+mins+":"+secs;
+}
+setInterval(printTime, 1000);
+
+
+// converting date to day display
+
+function main() {
+  var year = parseInt(readLine(), 10);
+  var month = parseInt(readLine(), 10);
+  var day = parseInt(readLine(), 10);
+
+  console.log(getWeekDay(year, month, day));
+}
+
+function getWeekDay(year, month, day) {
+  var names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var d = new Date(year, month, day);
+   //complete the function
+
+  var dayt = d.getDay();
+
+  return names[dayt];
+
+}
+
+// price change code
+
+function main() {
+   var increase = parseInt(readLine(), 10);
+   var prices = [98.99, 15.2, 20, 1026];
+   //your code goes here
+
+	let final = [];
+
+   for (let i = 0; i < prices.length; i++){
+		prices[i] += increase;
+		let sum = prices[i];
+
+
+   }
+
+		final.push(sum);
+		console.log(final);
+
+}
+
+//child nodes targeting in DOM
+
+<html>
+ <body>
+   <div id ="demo">
+     <p>some text</p>
+     <p>some other text</p>
+   </div>
+
+   <script>
+    var a = document.getElementById("demo");
+    var arr = a.childNodes;
+    for(var x=0;x<arr.length;x++) {
+      arr[x].innerHTML = "new text";
+    }
+   </script>
+
+ </body>
+</html>
