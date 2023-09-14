@@ -225,26 +225,26 @@ cc("A");
 //introduction to objects and properties dot notation and bracket notation
 
 // Setup
-const testObj = {
+const testObject = {
   hat: "ballcap",
   shirt: "jersey",
   shoes: "cleats",
 };
 
 // Only change code below this line
-const hatValue = testObj.hat; // Change this line
-const shirtValue = testObj.shirt; // Change this line
+const hatValue = testObject.hat; // Change this line
+const shirtValue = testObject.shirt; // Change this line
 
 // Setup
-const testObj = {
+const testObjectTwo = {
   "an entree": "hamburger",
   "my side": "veggies",
   "the drink": "water",
 };
 
 // Only change code below this line
-const entreeValue = testObj["an entree"]; // Change this line
-const drinkValue = testObj["the drink"]; // Change this line
+const entreeValue = testObjectTwo["an entree"]; // Change this line
+const drinkValue = testObjectTwo["the drink"]; // Change this line
 console.log(drinkValue);
 
 //accessing object properties as values INSTEAD OF just accessing it's name
@@ -410,21 +410,22 @@ while (i >= 0) {
 
 // For loops
 // Setup
-const myArray = [];
+
+const myNewArray = [];
 
 // Only change code below this line
 
 for (let i = 1; i < 5; i++) {
-  myArray.push(i);
+  myNewArray.push(i);
 }
 
 // Setup
-const myArray = [];
+const myNewNewArray = [];
 
 // Only change code below this line
 
 for (let i = 1; i <= 9; i += 2) {
-  myArray.push(i);
+  myNewNewArray.push(i);
 }
 
 //iterate through an array and add to total
@@ -435,59 +436,55 @@ for (let i = 0; i < myArr.length; i++) {
 }
 
 function main() {
-//take flight number and its status
-var flightNumber = readLine();
-var flightStatus = readLine();
-var flight1=new Flight(flightNumber, flightStatus);
-//assign a flight object to flight1 variable
-//output
-console.log('The flight ' + flight1.number + ' is ' + flight1.status)
+  //take flight number and its status
+  var flightNumber = readLine();
+  var flightStatus = readLine();
+  var flight1 = new Flight(flightNumber, flightStatus);
+  //assign a flight object to flight1 variable
+  //output
+  console.log("The flight " + flight1.number + " is " + flight1.status);
 }
 
 function Flight(flightNumber, flightStatus) {
-//fix the constructor
+  //fix the constructor
 
-this.number = flightNumber;
-this.status = flightStatus;
-};
+  this.number = flightNumber;
+  this.status = flightStatus;
+}
 
 // another exercise
 
 function main() {
-var prodID = readLine();
-var price = parseInt(readLine(),10);
-var discount = parseInt(readLine(),10);
-var prod1= new Product(prodID, price);
-console.log(prod1.prodID + " price: " + prod1.price);
-prod1.changePrice(discount);
-console.log(prod1.prodID + " new price: " + prod1.price);
-
-
-
+  var prodID = readLine();
+  var price = parseInt(readLine(), 10);
+  var discount = parseInt(readLine(), 10);
+  var prod1 = new Product(prodID, price);
+  console.log(prod1.prodID + " price: " + prod1.price);
+  prod1.changePrice(discount);
+  console.log(prod1.prodID + " new price: " + prod1.price);
 }
 
 function Product(prodID, price) {
-this.prodID = prodID;
-this.price = price;
+  this.prodID = prodID;
+  this.price = price;
 
-this.changePrice = function(discount) {
-//your code goes here
+  this.changePrice = function (discount) {
+    //your code goes here
 
-this.price = price - (price * discount / 100);
-}
+    this.price = price - (price * discount) / 100;
+  };
 }
 
 // calling a method inside of a function
 
 function contact(name, number) {
-this.name = name;
-this.number = number;
-this.print = print;
+  this.name = name;
+  this.number = number;
+  this.print = print;
 }
 
 function print() {
-console.log(this.name + ": " + this.number);
-
+  console.log(this.name + ": " + this.number);
 }
 var a = new contact("David", 12345);
 var b = new contact("Amy", 987654321);
@@ -497,54 +494,58 @@ b.print();
 // changing array
 
 function main() {
-var breakfasts = ['Cinnamon Doughnuts', 'Waffles', 'Granola', 'Chorizo Burrito', 'French Toast'];
-var index = parseInt(readLine(), 10)
-//replace the corresponding element by "Fluffy Pancakes"
+  var breakfasts = [
+    "Cinnamon Doughnuts",
+    "Waffles",
+    "Granola",
+    "Chorizo Burrito",
+    "French Toast",
+  ];
+  var index = parseInt(readLine(), 10);
+  //replace the corresponding element by "Fluffy Pancakes"
 
-breakfasts[index] = "Fluffy Pancakes"
-console.log(breakfasts);
-//output the menu to the console
+  breakfasts[index] = "Fluffy Pancakes";
+  console.log(breakfasts);
+  //output the menu to the console
 }
 
 // Math Objects
 
 function main() {
-var year = parseInt(readLine(), 10)
-//the output
-console.log(calcCent(year));
+  var year = parseInt(readLine(), 10);
+  //the output
+  console.log(calcCent(year));
 }
 
 //complete the function
-function calcCent(year){
-return Math.ceil(year / 100);
+function calcCent(year) {
+  return Math.ceil(year / 100);
 }
 
 // Math Objects
 
 function main() {
-   var year = parseInt(readLine(), 10)
+  var year = parseInt(readLine(), 10);
 
-   //the output
-   console.log(calcCent(year));
-
+  //the output
+  console.log(calcCent(year));
 }
 
 //complete the function
-function calcCent(year){
-   return Math.ceil(year / 100);
+function calcCent(year) {
+  return Math.ceil(year / 100);
 }
 
 // get and print time function
 
 function printTime() {
-	var d = new Date();
-	var hours = d.getHours();
-	var mins = d.getMinutes();
-	var secs = d.getSeconds();
-	document.body.innerHTML = hours+":"+mins+":"+secs;
+  var d = new Date();
+  var hours = d.getHours();
+  var mins = d.getMinutes();
+  var secs = d.getSeconds();
+  document.body.innerHTML = hours + ":" + mins + ":" + secs;
 }
 setInterval(printTime, 1000);
-
 
 // converting date to day display
 
@@ -557,53 +558,37 @@ function main() {
 }
 
 function getWeekDay(year, month, day) {
-  var names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var names = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   var d = new Date(year, month, day);
-   //complete the function
+  //complete the function
 
-  var dayt = d.getDay();
+  var day = d.getDay();
 
-  return names[dayt];
-
+  return names[day];
 }
 
 // price change code
 
 function main() {
-   var increase = parseInt(readLine(), 10);
-   var prices = [98.99, 15.2, 20, 1026];
-   //your code goes here
+  var increase = parseInt(readLine(), 10);
+  var prices = [98.99, 15.2, 20, 1026];
+  //your code goes here
 
-	let final = [];
+  let final = [];
 
-   for (let i = 0; i < prices.length; i++){
-		prices[i] += increase;
-		let sum = prices[i];
+  for (let i = 0; i < prices.length; i++) {
+    prices[i] += increase;
+    let sum = prices[i];
+  }
 
-
-   }
-
-		final.push(sum);
-		console.log(final);
-
+  final.push(sum);
+  console.log(final);
 }
-
-//child nodes targeting in DOM
-
-<html>
- <body>
-   <div id ="demo">
-     <p>some text</p>
-     <p>some other text</p>
-   </div>
-
-   <script>
-    var a = document.getElementById("demo");
-    var arr = a.childNodes;
-    for(var x=0;x<arr.length;x++) {
-      arr[x].innerHTML = "new text";
-    }
-   </script>
-
- </body>
-</html>
