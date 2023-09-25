@@ -700,3 +700,15 @@ function countdown(n){
   return;
 }
 // Only change code above this line
+
+//creating loop without using For
+
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum) {
+    return [];
+  } else {
+    const newArray = rangeOfNumbers(startNum, endNum - 1);
+    newArray.push(endNum);
+    return newArray;
+  }
+};
