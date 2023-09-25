@@ -656,3 +656,12 @@ lookUpProfile("Akira", "likes");
 function randomRange(myMin, myMax) {
   return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
 }
+
+
+//use parseInt to convert str to integer and checks base
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
