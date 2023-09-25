@@ -673,3 +673,14 @@ function checkEqual(a, b) {
 }
 
 checkEqual(1, 2);
+
+
+//chained ternary operators
+
+function checkSign(num) {
+  return (num > 0)? "positive"
+  : (num < 0 )? "negative"
+  :"zero";
+ }
+
+ checkSign(10);
