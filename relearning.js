@@ -650,3 +650,9 @@ function lookUpProfile(name, prop) {
 // Only change code above this line
 
 lookUpProfile("Akira", "likes");
+
+//Math.floor + Math.random
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}
