@@ -684,3 +684,19 @@ function checkSign(num) {
  }
 
  checkSign(10);
+
+ //using recursion to create countup loop
+
+ // Only change code below this line
+function countdown(n){
+
+  if (n < 1) {
+    return [];
+  } else {
+    const newArray = countdown(n-1);
+    newArray.unshift(n);
+    return newArray;
+  }
+  return;
+}
+// Only change code above this line
