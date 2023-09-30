@@ -657,7 +657,6 @@ function randomRange(myMin, myMax) {
   return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
 }
 
-
 //use parseInt to convert str to integer and checks base
 
 function convertToInteger(str) {
@@ -669,31 +668,27 @@ convertToInteger("10011");
 //ternary operators
 
 function checkEqual(a, b) {
-  return a === b? "Equal" : "Not Equal";
+  return a === b ? "Equal" : "Not Equal";
 }
 
 checkEqual(1, 2);
 
-
 //chained ternary operators
 
 function checkSign(num) {
-  return (num > 0)? "positive"
-  : (num < 0 )? "negative"
-  :"zero";
- }
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
 
- checkSign(10);
+checkSign(10);
 
- //using recursion to create countup loop
+//using recursion to create countup loop
 
- // Only change code below this line
-function countdown(n){
-
+// Only change code below this line
+function countdown(n) {
   if (n < 1) {
     return [];
   } else {
-    const newArray = countdown(n-1);
+    const newArray = countdown(n - 1);
     newArray.unshift(n);
     return newArray;
   }
@@ -711,4 +706,14 @@ function rangeOfNumbers(startNum, endNum) {
     newArray.push(endNum);
     return newArray;
   }
+}
+
+//rest parameter
+
+const sum = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
 };
