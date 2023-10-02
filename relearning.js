@@ -729,7 +729,7 @@ console.log(arr2);
 
 //destructuring assignments
 
-const HIGH_TEMPERATURES = {
+let HIGH_TEMPS = {
   yesterday: 75,
   today: 77,
   tomorrow: 80,
@@ -737,6 +737,20 @@ const HIGH_TEMPERATURES = {
 
 // Only change code below this line
 
-const { today, tomorrow } = HIGH_TEMPERATURES;
+const { today, tomorrow } = HIGH_TEMPS;
+
+// Only change code above this line
+
+//renaming during destructuring
+
+let HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80,
+};
+
+// Only change code below this line
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 
 // Only change code above this line
