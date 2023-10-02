@@ -793,3 +793,24 @@ const stats = {
 // Only change code below this line
 const half = ({ max, min }) => (max + min) / 2.0;
 // Only change code above this line
+
+//iterate through object with loop and use template literal
+
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"],
+};
+
+function makeList(arr) {
+  // Only change code below this line
+  let array = [];
+  for (let i = 0; i < arr.length; i++) {
+    array.push(`<li class="text-warning">${arr[i]}</li>`);
+  }
+  return array;
+  // Only change code above this line
+}
+
+const failuresList = makeList(result.failure);
+console.log(failuresList);
