@@ -754,3 +754,28 @@ let HIGH_TEMPERATURES = {
 const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 
 // Only change code above this line
+
+//destructuring nested objects
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 },
+};
+
+// Only change code below this line
+
+const {
+  today: { low: lowToday, high: highToday },
+} = LOCAL_FORECAST;
+
+//destructuring array with spread operator, returning only subarray
+
+function removeFirstTwo(list) {
+  const [a, b, ...arr] = list;
+
+  return arr;
+}
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
+console.log(sourceWithoutFirstTwo);
