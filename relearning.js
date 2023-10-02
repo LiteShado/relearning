@@ -814,3 +814,9 @@ function makeList(arr) {
 
 const failuresList = makeList(result.failure);
 console.log(failuresList);
+
+//object property shorthand with object literals
+
+const createPerson = (name, age, gender) =>
+  // Only change code below this line
+  ({ name, age, gender }); //can change variable name to whatever necessary
