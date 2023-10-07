@@ -751,7 +751,7 @@ let HIGH_TEMPERATURES = {
 
 // Only change code below this line
 
-const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+const { today: highTodday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 
 // Only change code above this line
 
@@ -907,4 +907,12 @@ const makeServerRequest = new Promise((resolve, reject) => {
   } else {
     reject("Data not received");
   }
+});
+//use then method to handle fulfilled requests
+makeServerRequest.then((result) => {
+  console.log(result);
+});
+//catch method to handle rejected requests
+makeServerRequest.catch((error) => {
+  console.log(error);
 });
