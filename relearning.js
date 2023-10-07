@@ -868,17 +868,17 @@ temp = thermos.temperature; // 26 in Celsius
 
 const uppercaseString = (string) => {
   return string.toUpperCase();
-}
+};
 
 const lowercaseString = (string) => {
-  return string.toLowerCase()
-}
+  return string.toLowerCase();
+};
 
-export {uppercaseString, lowercaseString};
+export { uppercaseString, lowercaseString };
 
 //importing functions for use in js
 
-import {uppercaseString, lowercaseString} from './string_functions.js';
+import { uppercaseString, lowercaseString } from "./string_functions.js";
 // Only change code above this line
 
 uppercaseString("hello");
@@ -892,7 +892,19 @@ export default function subtract(x, y) {
 
 //import default functions
 
-import subtract from './math_functions.js';
+import subtract from "./math_functions.js";
 // Only change code above this line
 
-subtract(7,4);
+subtract(7, 4);
+
+//creating Promise and using resolve and reject as arguments
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer;
+
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
