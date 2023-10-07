@@ -967,3 +967,57 @@ let vowelRegex = /[aeiou]/gi; // finds all vowels regardless of case
 let vowels = quoteSample.match(vowelRegex); //
 
 console.log(vowels);
+
+//using character set to find a range of letters
+let quoteSamples = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // matches all letters of string using character set
+let charSet = quoteSamples.match(alphabetRegex); // Change this line
+
+console.log(charSet);
+
+let quoteSampled = "Blueberry 3.141592653s are delicious.";
+let myNewRegex = /[h-s2-6]/gi; // using character set on numbers and letters
+let charSets = quoteSampled.match(myNewRegex); //
+console.log(charSets);
+
+let sample = "3 blind mice.";
+let regex = /[^aeiou0-9]/gi; // negated character set to match anything thats not a number or a vowel
+let negated = sample.match(regex); //
+console.log(negated);
+
+//match consecutive instances
+let difficultSpelling = "Mississippi";
+let consecutive = /s+/g; // + will find any letters that are repeated
+let cons = difficultSpelling.match(consecutive);
+
+console.log(cons);
+
+//using asterisk * to find characters that appear zero or more times
+let chewieRegex = /Aa*/; // Change this line
+// Only change code above this line
+
+let zero = chewieQuote.match(chewieRegex);
+console.log(zero);
+
+//greedy and lazy matching with * and ?, respectively
+
+let text = "<h1>Winter is coming</h1>";
+let all = /<.*?>/; // finds the <h1> tag because the . finds anything, the * finds all, and the ? finds least possible match
+let greedy = text.match(all);
+console.log(greedy);
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // finds Cal in the beginning of the string, not in the middle
+let beginning = calRegex.test(rickyAndCal);
+console.log(beginning);
+
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // use $ to find a string at the END of the sentence or pattern, not the beginning
+let ending = lastRegex.test(caboose);
+
+console.log(ending);
+
+let sentence = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // use \w as a shorthand representation of [a-zA-Z0-9_] and use g flag to find different variations
+let shorthand = sentence.match(alphabetRegexV2).length;
+console.log(shorthand);
