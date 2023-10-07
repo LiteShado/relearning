@@ -883,3 +883,9 @@ import {uppercaseString, lowercaseString} from './string_functions.js';
 
 uppercaseString("hello");
 lowercaseString("WORLD!");
+
+//export default functions
+
+export default function subtract(x, y) {
+  return x - y;
+}
