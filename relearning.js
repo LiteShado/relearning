@@ -820,3 +820,25 @@ console.log(failuresList);
 const createPerson = (name, age, gender) =>
   // Only change code below this line
   ({ name, age, gender }); //can change variable name to whatever necessary
+
+
+  //implicit and explicit classes and constructors
+
+  // Only change code below this line
+class Vegetable {
+  constructor(name){
+    this.name = name;
+  }
+}
+// Only change code above this line
+
+
+class Fruit {
+  something(){
+    console.log("you got it!");
+  }
+}
+const carrot = new Vegetable('carrot');
+const fruity = new Fruit();
+console.log(carrot.name); // Should display 'carrot'
+console.log(fruity.something); //should display "you got it!"
