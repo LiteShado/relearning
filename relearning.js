@@ -916,3 +916,54 @@ makeServerRequest.then((result) => {
 makeServerRequest.catch((error) => {
   console.log(error);
 });
+
+//regex
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let resulted = myRegex.test(myString);
+console.log(resulted);
+
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // using alternation or OR operator to find different possibilities
+let results = petRegex.test(petString);
+
+console.log(results);
+
+//using the i flag to ignore case of letters
+let theString = "freeCodeCamp";
+let fccRegex = /freecodecaMP/i; // Change this line
+let theresults = fccRegex.test(theString);
+console.log(theresults);
+
+//using match method on Regex
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // what phrase are we looking for?
+let answer = extractStr.match(codingRegex); // matching on string
+
+extractStr.match(/coding/);
+console.log(answer);
+
+//testing match for multiple instances
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/gi; // using global flag
+let test = twinkleStar.match(starRegex); // Change this line
+
+console.log(test);
+
+//using wildcard flag (.) to find any instance containing characters, in case of misspellings
+
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/gi; // Change this line
+let wildcard = unRegex.test(exampleStr);
+
+console.log(wildcard);
+
+//finding vowels in string using character class, which finds all instances of everything in brackets
+
+let quoteSample =
+  "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // finds all vowels regardless of case
+let vowels = quoteSample.match(vowelRegex); //
+
+console.log(vowels);
