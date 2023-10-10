@@ -1021,3 +1021,9 @@ let sentence = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // use \w as a shorthand representation of [a-zA-Z0-9_] and use g flag to find different variations
 let shorthand = sentence.match(alphabetRegexV2).length;
 console.log(shorthand);
+
+let opposite = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; //shorthand for |^a-zA-Z0-9_|
+let opposited = opposite.match(nonAlphabetRegex).length;
+
+console.log(opposited);
