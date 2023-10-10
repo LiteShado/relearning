@@ -1058,3 +1058,8 @@ let sentenced = "Whitespace is important in separating words";
 let countWhiteSpace = /\s/g; // Searches for whitespace as well as return, tab, form feed, and new line characters |/r/t/f/n/v|
 let whitespace = sentenced.match(countWhiteSpace);
 console.log(whitespace);
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/g; // {} is a quantity specifier that will find h only if it appears 3 - 6 times here in the string Oh no
+let quantity = ohRegex.test(ohStr);
+console.log(quantity);
