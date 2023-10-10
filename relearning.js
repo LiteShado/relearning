@@ -1027,3 +1027,15 @@ let nonAlphabetRegex = /\W/g; //shorthand for |^a-zA-Z0-9_|
 let opposited = opposite.match(nonAlphabetRegex).length;
 
 console.log(opposited);
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // searches for only numerical digits
+let numbers = movieName.match(numRegex).length;
+
+console.log(numbers);
+
+let movie = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // looks for all non-numerical characters, which is the same as |^0-9|
+let nonnumbers = movie.match(noNumRegex).length;
+
+console.log(nonnumbers);
