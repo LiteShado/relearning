@@ -1041,7 +1041,8 @@ let nonnumbers = movie.match(noNumRegex).length;
 console.log(nonnumbers);
 
 let username = "JackOfAllTrades";
-let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Usernames can only use alpha-numeric characters.
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+// Usernames can only use alpha-numeric characters.
 
 //The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
 
@@ -1052,3 +1053,8 @@ let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Usernames can only use alph
 let checkUser = userCheck.test(username);
 
 console.log(checkUser);
+
+let sentenced = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Searches for whitespace as well as return, tab, form feed, and new line characters |/r/t/f/n/v|
+let whitespace = sentenced.match(countWhiteSpace);
+console.log(whitespace);
